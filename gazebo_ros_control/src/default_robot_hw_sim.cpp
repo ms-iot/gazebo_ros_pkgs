@@ -38,6 +38,11 @@
    Desc:   Hardware Interface for any simulated robot in Gazebo
 */
 
+// a temporary workaround before the gazebo header refactor.
+// https://bitbucket.org/osrf/gazebo/pull-requests/3158
+#ifdef NOGDI
+#undef NOGDI
+#endif
 
 #include <gazebo_ros_control/default_robot_hw_sim.h>
 #include <urdf/model.h>
