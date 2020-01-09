@@ -39,6 +39,12 @@
    using pluginlib
 */
 
+// a temporary workaround before the gazebo header refactor.
+// https://bitbucket.org/osrf/gazebo/pull-requests/3158
+#ifdef NOGDI
+#undef NOGDI
+#endif
+
 // Boost
 #include <boost/bind.hpp>
 
