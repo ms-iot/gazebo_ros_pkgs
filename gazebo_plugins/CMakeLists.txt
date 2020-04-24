@@ -19,6 +19,7 @@ if(WIN32)
     NOMINMAX
     WIN32_LEAN_AND_MEAN
   )
+  add_compile_options(/wd4251 /wd4068)
 endif()
 
 find_package(ament_cmake REQUIRED)
@@ -210,6 +211,7 @@ add_library(gazebo_ros_video SHARED
 )
 ament_target_dependencies(gazebo_ros_video
   "gazebo_ros"
+  "gazebo_dev"
   "sensor_msgs"
   "cv_bridge"
 )
