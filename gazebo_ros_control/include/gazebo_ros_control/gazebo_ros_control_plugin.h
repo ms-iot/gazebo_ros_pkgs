@@ -53,6 +53,10 @@
 #include <gazebo/physics/physics.hh>
 #include <gazebo/common/common.hh>
 
+#if defined(_WIN32) && defined(ERROR)
+  #undef ERROR
+#endif
+
 // ros_control
 #include <gazebo_ros_control/robot_hw_sim.h>
 #include <controller_manager/controller_manager.h>
